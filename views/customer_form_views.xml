@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="customer_form_inherit" model="ir.ui.view">
+        <field name="name">customer.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+
+            <field name="website" position="after">
+                <field name="allowed_products_ids" widget="many2many_tags"/>
+                <field name="categories_id"/>
+            </field>
+
+        </field>
+    </record>
+</odoo>
